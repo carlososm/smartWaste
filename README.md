@@ -1,0 +1,2 @@
+# smartWaste
+smartWaste API RESTfull
