@@ -1,4 +1,5 @@
 {
+  "start": "node server.js",
   "name": "smartwaste",
   "version": "1.0.0",
   "description": "smartWaste API RESTfull",
