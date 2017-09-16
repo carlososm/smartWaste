@@ -1,9 +1,8 @@
 {
-  "start": "nodemon server.js",
   "name": "smartwaste",
   "version": "1.0.0",
-  "description": "smartWaste API RESTfull",
-  "main": "server.js",
+  "description": "RESTful smartWasteAPI",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,7 +11,15 @@
     "type": "git",
     "url": "git+ssh://git@github.com/carlososm/smartWaste.git"
   },
-  "author": "",
+  "keywords": [
+    "API",
+    "RESTful",
+    "contability",
+    "waste",
+    "APP",
+    "carlososm"
+  ],
+  "author": "carlososm (Carlos Olivares)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/carlososm/smartWaste/issues"
