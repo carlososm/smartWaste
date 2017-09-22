@@ -1,0 +1,28 @@
+{
+  "name": "smartwaste",
+  "version": "1.0.0",
+  "description": "smartWaste API RESTfull",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/carlososm/smartWaste.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlososm/smartWaste/issues"
+  },
+  "homepage": "https://github.com/carlososm/smartWaste#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12"
+  }
+}
