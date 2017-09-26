@@ -15,10 +15,10 @@ app.use(bodyParser.json());
 //   res.status(404).send({url : req.originalUrl + ' not found'})
 // });
 
-app.get('/public/index.html');
+app.use(express.static(path.join(__dirname, '/public/')))
 
-var routes = require('./api/routes/smartWasteRoutes'); // importing route
-routes(app);                                           // register the route
+    var routes = require('./api/routes/smartWasteRoutes'); // importing route
+routes(app);                                               // register the route
 
 app.listen(port);
 
