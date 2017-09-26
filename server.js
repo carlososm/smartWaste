@@ -4,6 +4,8 @@ var express = require('express'), app = express(),
         require('./api/models/smartWasteModel'), // created model loading here
     bodyParser = require('body-parser');
 
+var http = requiere('http');
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Tododb');
@@ -15,10 +17,10 @@ app.use(bodyParser.json());
 //   res.status(404).send({url : req.originalUrl + ' not found'})
 // });
 
-app.use(express.static(path.join(__dirname, '/public/')))
+app.use(express.static(path.join(__dirname, '/public/')));
 
-    var routes = require('./api/routes/smartWasteRoutes'); // importing route
-routes(app);                                               // register the route
+var routes = require('./api/routes/smartWasteRoutes'); // importing route
+routes(app);                                           // register the route
 
 app.listen(port);
 
