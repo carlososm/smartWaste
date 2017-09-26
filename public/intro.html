@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Grayscale - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img alt="Brand" src="./img/my-brand__ligth.png" style="width: 30px; height: 30px;"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#global">Posición global</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#activity">Mi actividad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#accounts">Mis cuentas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#plots">Gráficos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Global Header -->
+  <header id="global" class="masthead">
+    <div class="intro-body">
+      <div class="container">
+        <h2>Posición global</h2>
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <div class="card">
+              <div class="title-card">
+                <h3>Mi actividad reciente</h3>
+              </div>
+              <div class="info-card">
+                <table>
+                  <tr>
+                    <th class="hidden">__id</th>
+                    <th>Tipo</th>
+                    <th>Concepto</th>
+                    <th>Canidad</th>
+                    <th>Fecha</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td class="hidden">__id</td>
+                    <td>Ingreso</td>
+                    <td>Nómina</td>
+                    <td>1.000,00€</td>
+                    <td>25/09/17</td>
+                    <td><i class="fa fa-eye"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="hidden">__id</td>
+                    <td>Ingreso</td>
+                    <td>Nómina</td>
+                    <td>1.000,00€</td>
+                    <td>25/09/17</td>
+                    <td><i class="fa fa-eye"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="hidden">__id</td>
+                    <td>Ingreso</td>
+                    <td>Nómina</td>
+                    <td>1.000,00€</td>
+                    <td>25/09/17</td>
+                    <td><i class="fa fa-eye"></i></td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-6 mx-auto">
+            <div class="card">
+              <div class="title-card">
+                <h3>Mis cuentas</h3>
+              </div>
+              <div class="info-card">
+                <table>
+                  <tr>
+                    <th class="hidden">__id</th>
+                    <th>Nombre</th>
+                    <th>Saldo</th>
+                    <th>Balance mes</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td class="hidden">__id</td>
+                    <td>Bankia</td>
+                    <td>1.000,00€</td>
+                    <td>1.000,00€</td>
+                    <td><i class="fa fa-eye"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="hidden">__id</td>
+                    <td>Santander</td>
+                    <td>1.000,00€</td>
+                    <td>1.000,00€</td>
+                    <td><i class="fa fa-eye"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="hidden">__id</td>
+                    <td>Efectivo</td>
+                    <td>1.000,00€</td>
+                    <td>1.000,00€</td>
+                    <td><i class="fa fa-eye"></i></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Activity filter Section -->
+  <section id="activity-filter" class="text-center filter filter-hidden hidden scroll">
+    <div class="close-btn">
+      <i class="fa fa-times fa-2x fa-fw"></i>
+    </div>
+    <div class="filter-info">
+      <h4>Filtro actividades</h4>
+      <hr>
+      <form id="activity-filter">
+        <h6>Tipo de actividad</h6>
+        <input type="checkbox" name="activity" value="allActivities" id="allActivities" class="cb"><label for="allActivities">Todas</label><br>
+        <input type="checkbox" name="activity" value="entry" id="entry" class="cb"><label for="entry">Ingresos</label><br>
+        <input type="checkbox" name="activity" value="waste" id="waste" class="cb"><label for="waste">Gastos</label><br>
+        <input type="checkbox" name="activity" value="move" id="move" class="cb"><label for="move">Movimientos</label>
+
+        <h6>Cuentas origen/destino</h6>
+        <input type="checkbox" name="actAccount" value="cuenta1" id="allAccounts" class="cb"><label for="allAccounts">Todas</label><br>
+        <input type="checkbox" name="actAccount" value="cuenta1" id="cuenta1" class="cb"><label for="cuenta1">Cuenta1</label><br>
+        <input type="checkbox" name="actAccount" value="cuenta2" id="cuenta2" class="cb"><label for="cuenta2">Cuenta2</label>
+
+        <h6>Fechas</h6>
+        <label for="initialTime">Fecha de inicio</label><input type="date" name="init" step="1" min="2000-01-01" value="" id="initialTime">
+        <label for="finalTime">Fecha de fin</label><input type="date" name="init" step="1" min="2000-01-01" value="" id="finalTime">
+
+        <button type="button" class="btn btn-default" id="applay">Aplicar</button>
+        <button type="button" class="btn btn-default" id="clean">Limpiar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Activity Section -->
+  <section id="activity" class="content-section text-center">
+    <div class="container">
+      <h2>Mi actividad reciente</h2>
+      <a href="./trades.html" class="btn btn-default btn-lg">
+          <i class="fa fa-plus fa-fw"></i>
+          <span class="network-name">Gestor de actividades </span>
+        </a>
+      <a id="activity-filter-btn" class="btn btn-default btn-lg">
+            <i class="fa fa-filter fa-fw"></i>
+            <span class="network-name">Filtro de actividades </span>
+          </a>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 mx-auto">
+          <div class="card">
+            <div class="title-card">
+              <h3>Ingresos</h3>
+            </div>
+            <div class="info-card">
+              <table>
+                <tr>
+                  <th class="hidden">__id</th>
+                  <th>Concepto</th>
+                  <th>Cantidad</th>
+                  <th>Fecha</th>
+                  <th>Origen</th>
+                  <th>Destino</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td>Empresa</td>
+                  <td>Bankia</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td>Empresa</td>
+                  <td>Bankia</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td>Empresa</td>
+                  <td>Bankia</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2 mx-auto">
+          <div class="card">
+            <div class="title-card">
+              <h3>Gastos</h3>
+            </div>
+            <div class="info-card">
+              <table>
+                <tr>
+                  <th class="hidden">__id</th>
+                  <th>Concepto</th>
+                  <th>Cantidad</th>
+                  <th>Tipo</th>
+                  <th>Subtipo</th>
+                  <th>Fecha</th>
+                  <th>Cuenta</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Compra</td>
+                  <td>100,00€</td>
+                  <td>Alimentación</td>
+                  <td>Diaria</td>
+                  <td>25/09/17</td>
+                  <td>Efectivo</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Compra</td>
+                  <td>100,00€</td>
+                  <td>Alimentación</td>
+                  <td>Diaria</td>
+                  <td>25/09/17</td>
+                  <td>Efectivo</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Compra</td>
+                  <td>100,00€</td>
+                  <td>Alimentación</td>
+                  <td>Diaria</td>
+                  <td>25/09/17</td>
+                  <td>Efectivo</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Account filter Section -->
+  <section id="account-filter" class="text-center filter filter-hidden hidden scroll">
+    <div class="close-btn">
+      <i class="fa fa-times fa-2x fa-fw"></i>
+    </div>
+    <div class="filter-info">
+      <h4>Filtro de cuentas</h4>
+      <hr>
+      <form id="activity-filter">
+        <h6>Cuentas a mostrar</h6>
+        <input type="checkbox" name="account" value="cuenta1" id="allAccounts" class="cb"><label for="allAccounts">Todas</label><br>
+        <input type="checkbox" name="account" value="cuenta1" id="cuenta1" class="cb"><label for="cuenta1">Cuenta1</label><br>
+        <input type="checkbox" name="account" value="cuenta2" id="cuenta2" class="cb"><label for="cuenta2">Cuenta2</label>
+
+        <h6>Fechas</h6>
+        <label for="initialTime">Fecha de inicio</label><input type="date" name="init" step="1" min="2000-01-01" value="" id="initialTime">
+        <label for="finalTime">Fecha de fin</label><input type="date" name="init" step="1" min="2000-01-01" value="" id="finalTime">
+
+        <button type="button" class="btn btn-default" id="applay">Aplicar</button>
+        <button type="button" class="btn btn-default" id="clean">Limpiar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Accounts Section -->
+  <section id="accounts" class="image-section content-section text-center">
+    <div class="container">
+      <h2>Mis cuentas</h2>
+      <a href="#accounts" class="btn btn-default btn-lg">
+          <i class="fa fa-plus fa-fw"></i>
+          <span class="network-name">Gestor de cuentas </span>
+        </a>
+      <a id="account-filter-btn" class="btn btn-default btn-lg">
+            <i class="fa fa-filter fa-fw"></i>
+            <span class="network-name">Filtro de cuentas </span>
+          </a>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <div class="card">
+            <div class="title-card">
+              <h3>Cuenta 1</h3>
+            </div>
+            <div class="info-card">
+              <table>
+                <tr>
+                  <th class="hidden">__id</th>
+                  <th>Tipo</th>
+                  <th>Concepto</th>
+                  <th>Cantidad</th>
+                  <th>Fecha</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Ingreso</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Ingreso</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Ingreso</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td colspan="3">SALDO/BALANCE</td>
+                  <td colspan="2">3.000,00€</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mx-auto">
+          <div class="card">
+            <div class="title-card">
+              <h3>Cuenta 2</h3>
+            </div>
+            <div class="info-card">
+              <table>
+                <tr>
+                  <th class="hidden">__id</th>
+                  <th>Tipo</th>
+                  <th>Concepto</th>
+                  <th>Canidad</th>
+                  <th>Fecha</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Ingreso</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Ingreso</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td class="hidden">__id</td>
+                  <td>Ingreso</td>
+                  <td>Nómina</td>
+                  <td>1.000,00€</td>
+                  <td>25/09/17</td>
+                  <td><i class="fa fa-eye"></i></td>
+                </tr>
+                <tr>
+                  <td colspan="3">SALDO/BALANCE</td>
+                  <td colspan="2">3.000,00€</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plots section -->
+  <section id="plots" class="content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Mis gráficos</h2>
+          <p>Feel free to leave us a comment on the
+            <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a> on Start Bootstrap to give some feedback about this theme!</p>
+          <ul class="list-inline banner-social-buttons">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google+</span>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="image-section content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact Start Bootstrap</h2>
+          <p>Feel free to leave us a comment on the
+            <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a> on Start Bootstrap to give some feedback about this theme!</p>
+          <ul class="list-inline banner-social-buttons">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="network-name">Github</span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google+</span>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <!-- <div id="map"></div> -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>Copyright &copy; Carlos Olivares 2017</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

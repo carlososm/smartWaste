@@ -1,0 +1,65 @@
+Date.prototype.toDateInputValue = (function() {
+  var local = new Date(this);
+  local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+  return local.toJSON().slice(0, 10);
+});
+
+(function($) {
+"use strict"; // Start of use strict
+
+$("#account-filter-btn").click(function() {
+  $("#account-filter").toggleClass("filter-hidden");
+  $("#account-filter").removeClass("hidden");
+  $("#activity-filter").addClass("filter-hidden");
+  $("#activity-filter").addClass("hidden");
+  $("#account-filter")
+      .bind("animationend webkitAnimationnd oAnimationEnd MSAnimationEnd",
+            function() {
+              if ($(this).hasClass("filter-hidden")) {
+                $(this).addClass("hidden");
+              } else {
+                $(this).removeClass("hidden")
+              }
+            });
+  $("body").toggleClass("no-scroll");
+});
+
+$("#activity-filter-btn").click(function() {
+  $("#activity-filter").toggleClass("filter-hidden");
+  $("#activity-filter").removeClass("hidden");
+  $("#account-filter").addClass("filter-hidden");
+  $("#account-filter").addClass("hidden");
+  $("#activity-filter")
+      .bind("animationend webkitAnimationnd oAnimationEnd MSAnimationEnd",
+            function() {
+              if ($(this).hasClass("filter-hidden")) {
+                $(this).addClass("hidden");
+              } else {
+                $(this).removeClass("hidden")
+              }
+            });
+  $("body").toggleClass("no-scroll");
+});
+
+$(".filter .fa-times").click(function() {
+  $(this).parent().parent().addClass("filter-hidden");
+  $(this).parent().parent().bind(
+      "animationend webkitAnimationnd oAnimationEnd MSAnimationEnd",
+      function() {
+        if ($(this).hasClass("filter-hidden")) {
+          $(this).addClass("hidden");
+        } else {
+          $(this).removeClass("hidden")
+        }
+      });
+  $("body").toggleClass("no-scroll");
+});
+
+})(jQuery);
+
+$(document).ready(function() {
+  $('#initialTime').val(new Date().toDateInputValue());
+});
+$(document).ready(function() {
+  $('#finalTime').val(new Date().toDateInputValue());
+});

@@ -1,0 +1,204 @@
+.scroll {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.no-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+h3 {
+  margin-bottom: 0;
+}
+h6 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.form-control {
+  border: solid 2px white;
+  border-radius: 0;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+/** card **/
+
+.card {
+    position: relative;
+    display: block;
+    vertical-align: top;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    background-color: transparent;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.title-card {
+    position: relative;
+    display: block;
+    vertical-align: top;
+    padding: 24px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #42DCA3;
+}
+
+.info-card {
+    position: relative;
+    display: block;
+    vertical-align: top;
+    padding: 24px;
+    border-radius: 0 0 2px 2px;
+    border: solid 2px;
+    border-color: #42DCA3;
+}
+
+.title-card i {
+    float: right;
+}
+
+/** table **/
+table {
+  width: 100%
+}
+th {
+  text-align: left;
+  text-transform: uppercase;
+}
+td {
+  text-align: left;
+}
+tr:nth-child(odd) {
+  background: #298966;
+}
+tr:first-child {
+  background: white;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+}
+#accounts tr:last-child {
+  background: white;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: black;
+}
+
+/** filter **/
+.filter {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 300px;
+  height: 80vh;
+  margin-top: 15vh;
+  background: white;
+  z-index: 1000;
+  color: black;
+  text-align: left !important;
+}
+
+.filter-info {
+  margin: 20px 25px 20px 25px;
+}
+
+#account-filter, #activity-filter {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+    width: 20%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 20%;
+  }
+}
+
+#account-filter.filter-hidden, #activity-filter.filter-hidden {
+  animation-duration: 0.5s;
+  animation-name: slideout;
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+    width: 20%
+  }
+
+  to {
+    margin-left: -100%;
+    width: 20%;
+  }
+}
+
+.close-btn {
+  float: none;
+  text-align: right;
+  margin: 10px;
+}
+
+@import url(./css/font-awesome.min.css);
+input[type=checkbox] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: solid 1px white;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+
+}
+
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: 19px;
+}
+
+
+input[type=checkbox].cb {
+    display: none;
+}
+
+input[type=checkbox].cb + label:before {
+    content: "\f096";
+    letter-spacing: 10px;
+}
+
+input[type=checkbox].cb:checked + label:before {
+    content: '\f046';
+}
+
+input[type="checkbox"]:focus{
+    outline: none;
+}
+
+.icons button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+form .btn {
+  border-color: black;
+  color: black;
+  margin: 20px 5px 20px 5px;
+}
+
+#trades .input-group {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  width: 70%;
+  margin-left: 15%;
+}
