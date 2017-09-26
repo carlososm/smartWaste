@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 //   res.status(404).send({url : req.originalUrl + ' not found'})
 // });
 
+app.get('/public/index.html', function(req, res) { res.send('Hello World!'); });
+
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
 routes(app);                                           // register the route
 
