@@ -4,7 +4,7 @@ var express = require('express'), app = express(),
         require('./api/models/smartWasteModel'), // created model loading here
     bodyParser = require('body-parser');
 
-var http = requiere('http');
+var http = require('http');
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
