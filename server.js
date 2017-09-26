@@ -5,6 +5,7 @@ var express = require('express'), app = express(),
     bodyParser = require('body-parser');
 
 var http = require('http');
+var path = require('path');
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
