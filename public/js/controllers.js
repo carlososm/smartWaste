@@ -7,9 +7,9 @@ function mainController($scope, $http) {
         $scope.trades = data;
         console.log(data)
       })
-      .error(function(data) { console.log('Error: ' + data); });
+      .error(function(data) { console.log('Error 1: ' + data); });
 
-  // Cuando se añade un nuevo TODO, manda el texto a la API
+  // Cuando se añade un nuevo TRADE, manda el texto a la API
   $scope.createTrade = function() {
     $http.post('/trades', $scope.formData)
         .success(function(data) {
@@ -17,16 +17,26 @@ function mainController($scope, $http) {
           $scope.trades = data;
           console.log(data);
         })
-        .error(function(data) { console.log('Error:' + data); });
+        .error(function(data) { console.log('Error 2:' + data); });
   };
 
-  // Borra un TODO despues de checkearlo como acabado
+  // Borra un TRADE despues de checkearlo como acabado
+  $scope.showTrade = function(id) {
+    $http.get('/trades/' + id)
+        .success(function(data) {
+          $scope.trades = data;
+          console.log(data);
+        })
+        .error(function(data) { console.log('Error 3:' + data); });
+  };
+
+  // Borra un TRADE despues de checkearlo como acabado
   $scope.deleteTrade = function(id) {
     $http.delete('/trades/' + id)
         .success(function(data) {
           $scope.trades = data;
           console.log(data);
         })
-        .error(function(data) { console.log('Error:' + data); });
+        .error(function(data) { console.log('Error 4:' + data); });
   };
 }

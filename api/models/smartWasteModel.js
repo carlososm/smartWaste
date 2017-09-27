@@ -13,8 +13,8 @@ var TradeSchema = new Schema({
   deposit : {origin : {type : String}, destiny : {type : String}},
   movement : {origin : {type : String}, destiny : {type : String}},
   waste : {
-    type : {type : String, enum : [ 'deposit', 'waste', 'movement' ]},
-    subtype : {type : String, enum : [ 'deposit', 'waste', 'movement' ]},
+    type : {type : String},
+    subtype : {type : String},
     origin : {type : String}
   }
 });
