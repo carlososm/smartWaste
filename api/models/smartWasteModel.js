@@ -28,7 +28,7 @@ var TradeSchema = new Schema({
     subtype : {type : String, enum : [ 'deposit', 'waste', 'movement' ]},
     origin :
         {type : String, required : 'Kindly enter the origin of the waste'}
-  },
+  }
 });
 
 module.exports = mongoose.model('Trades', TradeSchema);
