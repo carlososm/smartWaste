@@ -55,6 +55,43 @@ $(".filter .fa-times").click(function() {
   $("body").toggleClass("no-scroll");
 });
 
+$("#newDeposit").click(function() {
+  if ($(this).hasClass("clicked")) {
+    $(this).removeClass("clicked");
+  } else {
+    $(this).addClass("clicked");
+    $("#newWaste").removeClass("clicked");
+    $("#newMovement").removeClass("clicked");
+    $(".deposit").removeClass("hidden");
+    $(".waste").addClass("hidden");
+    $(".movement").addClass("hidden");
+  }
+});
+$("#newWaste").click(function() {
+  if ($(this).hasClass("clicked")) {
+    $(this).removeClass("clicked");
+  } else {
+    $(this).addClass("clicked");
+    $("#newDeposit").removeClass("clicked");
+    $("#newMovement").removeClass("clicked");
+    $(".waste").removeClass("hidden");
+    $(".deposit").addClass("hidden");
+    $(".movement").addClass("hidden");
+  }
+});
+$("#newMovement").click(function() {
+  if ($(this).hasClass("clicked")) {
+    $(this).removeClass("clicked");
+  } else {
+    $(this).addClass("clicked");
+    $("#newWaste").removeClass("clicked");
+    $("#newDeposit").removeClass("clicked");
+    $(".movement").removeClass("hidden");
+    $(".deposit").addClass("hidden");
+    $(".waste").addClass("hidden");
+  }
+});
+
 })(jQuery);
 
 $(document).ready(function() {

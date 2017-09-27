@@ -183,6 +183,10 @@ input[type="checkbox"]:focus{
     outline: none;
 }
 
+input, textarea {
+  margin: 10px;
+}
+
 .icons button {
     text-decoration: none;
     border: none;
@@ -190,7 +194,7 @@ input[type="checkbox"]:focus{
     padding: 0;
 }
 
-form .btn {
+.filter .btn {
   border-color: black;
   color: black;
   margin: 20px 5px 20px 5px;
@@ -201,4 +205,12 @@ form .btn {
   margin-top: 15px;
   width: 70%;
   margin-left: 15%;
+}
+
+/** newTrades **/
+.clicked {
+  color: black;
+  border: 1px solid #42DCA3;
+  outline: none;
+  background-color: #42DCA3;
 }
