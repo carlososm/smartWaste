@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="angularSmartWaste">
 
 <head>
 
@@ -24,7 +24,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-controller="mainController">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -118,16 +118,16 @@
 
 
           <table>
-            <tr>
-              <th class="hidden">__id</th>
-              <th>Tipo act.</th>
-              <th>Concepto</th>
-              <th>Cantidad</th>
-              <th>Fecha</th>
+            <tr ng-repeat="trade in trades">
+              <th class="hidden">{{trade._id}}</th>
+              <th>{{trade.type}}</th>
+              <th>{{trade.concept}}</th>
+              <th>{{trade.ammount}}</th>
+              <th>{{trade.date}}</th>
               <th>Tipo</th>
               <th>Subtipo</th>
-              <th>Origen</th>
-              <th>Destino</th>
+              <th>{{trade.origin}}</th>
+              <th>{{trade.destiny}}</th>
               <th></th>
             </tr>
             <tr>

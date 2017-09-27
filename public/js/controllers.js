@@ -22,7 +22,7 @@ function mainController($scope, $http) {
 
   // Borra un TODO despues de checkearlo como acabado
   $scope.deleteTrade = function(id) {
-    $http.delete('/api/trades/' + id)
+    $http.delete('/trades/' + id)
         .success(function(data) {
           $scope.trades = data;
           console.log(data);
