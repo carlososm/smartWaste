@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Grayscale - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img alt="Brand" src="./img/my-brand__ligth.png" style="width: 30px; height: 30px;"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="intro.html#global">Posición global</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="intro.html#activity">Mi actividad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="intro.html#accounts">Mis cuentas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#plots">Gráficos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Activity filter Section -->
+  <section id="activity-filter" class="text-center filter filter-hidden hidden scroll">
+    <div class="close-btn">
+      <i class="fa fa-times fa-2x fa-fw"></i>
+    </div>
+    <div class="filter-info">
+      <h4>Filtro actividades</h4>
+      <hr>
+      <form id="activity-filter">
+        <h6>Tipo de actividad</h6>
+        <input type="checkbox" name="activity" value="allActivities" id="allActivities" class="cb"><label for="allActivities">Todas</label><br>
+        <input type="checkbox" name="activity" value="entry" id="entry" class="cb"><label for="entry">Ingresos</label><br>
+        <input type="checkbox" name="activity" value="waste" id="waste" class="cb"><label for="waste">Gastos</label><br>
+        <input type="checkbox" name="activity" value="move" id="move" class="cb"><label for="move">Movimientos</label>
+
+        <h6>Cuentas origen/destino</h6>
+        <input type="checkbox" name="actAccount" value="cuenta1" id="allAccounts" class="cb"><label for="allAccounts">Todas</label><br>
+        <input type="checkbox" name="actAccount" value="cuenta1" id="cuenta1" class="cb"><label for="cuenta1">Cuenta1</label><br>
+        <input type="checkbox" name="actAccount" value="cuenta2" id="cuenta2" class="cb"><label for="cuenta2">Cuenta2</label>
+
+        <h6>Fechas</h6>
+        <label for="initialTime">Fecha de inicio</label><input type="date" name="init" step="1" min="2000-01-01" value="" id="initialTime">
+        <label for="finalTime">Fecha de fin</label><input type="date" name="init" step="1" min="2000-01-01" value="" id="finalTime">
+
+        <button type="button" class="btn btn-default" id="applay">Aplicar</button>
+        <button type="button" class="btn btn-default" id="clean">Limpiar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Trades Section -->
+  <section id="trades" class="content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Mi actividad</h2>
+          <a href="./trades.html" class="btn btn-default btn-lg">
+              <i class="fa fa-plus fa-fw"></i>
+              <span class="network-name">Crear nueva</span>
+            </a>
+          <a id="activity-filter-btn" class="btn btn-default btn-lg">
+                  <i class="fa fa-filter fa-fw"></i>
+                  <span class="network-name">Filtro de actividades </span>
+                </a>
+
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Origen/destino</a></li>
+                <li><a href="#">Concepto</a></li>
+                <li><a href="#">Cantidad</a></li>
+              </ul>
+            </div>
+            <!-- /btn-group -->
+            <input type="text" class="form-control" aria-label="..." placeholder="Text searched trade ...">
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg" type="button">Go!</button>
+            </span>
+          </div>
+          <!-- /input-group -->
+
+
+          <table>
+            <tr>
+              <th class="hidden">__id</th>
+              <th>Tipo act.</th>
+              <th>Concepto</th>
+              <th>Cantidad</th>
+              <th>Fecha</th>
+              <th>Tipo</th>
+              <th>Subtipo</th>
+              <th>Origen</th>
+              <th>Destino</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+            <tr>
+              <td class="hidden">__id</td>
+              <td>Gasto</td>
+              <td>Compra</td>
+              <td>1.000,00€</td>
+              <td>25/09/17</td>
+              <td>Alimentación</td>
+              <td>Comida</td>
+              <td>Bankia</td>
+              <td></td>
+              <td><i class="fa fa-eye"></i></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>Copyright &copy; Carlos Olivares 2017</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

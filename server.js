@@ -15,7 +15,7 @@ server.listen(8080, function() {
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb');
+mongoose.connect('mongodb://localhost/smartWaste');
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
