@@ -6,7 +6,7 @@ var express = require('express'), app = express(),
 
 var server = require('http').Server(app);
 var path = require('path');
-var io = require('socket.io')(app);
+var io = require('socket.io')(server);
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
