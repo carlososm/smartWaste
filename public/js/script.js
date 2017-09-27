@@ -1,6 +1,3 @@
-var socket = io.connect('http://carlososm.ddns.net:8080', {'forceNew' : true});
-socket.on('messages', function(data) { console.log(data); });
-
 Date.prototype.toDateInputValue = (function() {
   var local = new Date(this);
   local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
