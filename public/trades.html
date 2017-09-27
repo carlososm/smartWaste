@@ -119,27 +119,27 @@
 
           <table>
             <tr ng-repeat="trade in trades">
-              <th class="hidden">{{trade._id}}</th>
-              <th>{{trade.type}}</th>
-              <th>{{trade.concept}}</th>
-              <th>{{trade.ammount}}</th>
-              <th>{{trade.date}}</th>
+              <th class="hidden">_id</th>
+              <th>Tipo</th>
+              <th>Concepto</th>
+              <th>Cantidad</th>
+              <th>Fecha</th>
               <th>Tipo</th>
               <th>Subtipo</th>
-              <th>{{trade.origin}}</th>
-              <th>{{trade.destiny}}</th>
+              <th>Origen</th>
+              <th>Destino</th>
               <th></th>
             </tr>
             <tr>
-              <td class="hidden">__id</td>
-              <td>Gasto</td>
-              <td>Compra</td>
-              <td>1.000,00€</td>
-              <td>25/09/17</td>
-              <td>Alimentación</td>
-              <td>Comida</td>
-              <td>Bankia</td>
-              <td></td>
+              <td class="hidden">{{trade._id}}</td>
+              <td>{{trade.type}}</td>
+              <td>{{trade.concept}}</td>
+              <td>{{trade.ammount}}</td>
+              <td>Date</td>
+              <td>Tipo</td>
+              <td>Subtipo</td>
+              <td>{{trade.origin}}</td>
+              <td>{{trade.destiny}}</td>
               <td><i class="fa fa-eye"></i></td>
             </tr>
             <tr>
