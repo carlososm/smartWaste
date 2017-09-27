@@ -1,12 +1,17 @@
-var express = require('express'), app = express(),
-    port = process.env.PORT || 8080, mongoose = require('mongoose'),
-    Trade =
-        require('./api/models/smartWasteModel'), // created model loading here
-    bodyParser = require('body-parser');
-
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8080;
+var mongoose = require('mongoose');
+var Trade =
+    require('./api/models/smartWasteModel'); // created model loading here
+var bodyParser = require('body-parser');
 var server = require('http').Server(app);
 var path = require('path');
 var io = require('socket.io')(server);
+
+server.listen(8080, function() {
+  console.log('Servidor corriendo en http://localhost:8080');
+});
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -35,6 +40,6 @@ io.on('connection', function(socket) {
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
 routes(app);                                           // register the route
 
-app.listen(port);
+// app.listen(port);
 
 console.log('smart waste RESTful API server started on: ' + port);
