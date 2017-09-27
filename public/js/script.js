@@ -1,6 +1,5 @@
-var socket = io.connect('http://localhost:8080', {'forceNew' : true});
+var socket = io.connect('http://carlososm.ddns.net:8080', {'forceNew' : true});
 socket.on('messages', function(data) { console.log(data); });
-alert();
 
 Date.prototype.toDateInputValue = (function() {
   var local = new Date(this);
