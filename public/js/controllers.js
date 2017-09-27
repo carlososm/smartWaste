@@ -11,7 +11,7 @@ function mainController($scope, $http) {
 
   // Cuando se añade un nuevo TODO, manda el texto a la API
   $scope.createTrade = function() {
-    $http.post('/api/trades', $scope.formData)
+    $http.post('../../trades', $scope.formData)
         .success(function(data) {
           $scope.formData = {};
           $scope.trades = data;
