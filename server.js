@@ -4,8 +4,9 @@ var express = require('express'), app = express(),
         require('./api/models/smartWasteModel'), // created model loading here
     bodyParser = require('body-parser');
 
-var http = require('http');
+var server = require('http').Server(app);
 var path = require('path');
+var io = require('socket.io')(app);
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -19,6 +20,17 @@ app.use(bodyParser.json());
 // });
 
 app.use(express.static(path.join(__dirname, '/public/')));
+
+var messages = [
+  {author : "Carlos", text : "Hola! que tal?"},
+  {author : "Pepe", text : "Muy bien! y tu??"},
+  {author : "Paco", text : "Genial!"}
+];
+
+io.on('connection', function(socket) {
+  console.log('Un cliente se ha conectado');
+  socket.emit('messages', messages);
+});
 
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
 routes(app);                                           // register the route
