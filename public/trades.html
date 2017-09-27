@@ -118,7 +118,7 @@
 
 
           <table>
-            <tr ng-repeat="trade in trades">
+            <tr>
               <th class="hidden">_id</th>
               <th>Tipo</th>
               <th>Concepto</th>
@@ -130,7 +130,7 @@
               <th>Destino</th>
               <th></th>
             </tr>
-            <tr>
+            <tr ng-repeat="trade in trades">
               <td class="hidden">{{trade._id}}</td>
               <td>{{trade.type}}</td>
               <td>{{trade.concept}}</td>
