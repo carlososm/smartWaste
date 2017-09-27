@@ -1,4 +1,4 @@
-angular.module('smartWaste', []).config([
+angular.module('angularSmartWaste', []).config([
   '$routeProvider',
   function($routeProvider) {
     $routeProvider
