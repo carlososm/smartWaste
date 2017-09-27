@@ -3,9 +3,9 @@ angular.module('angularSmartWaste', []).config([
   function($routeProvider) {
     $routeProvider
         .when('/trades',
-              {templateUrl : '/trades.html', controller : PollListCtrl})
+              {templateUrl : '/trades.html', controller : mainController})
         .when('/trades/:tradeId',
-              {templateUrl : '/trade.html', controller : PollItemCtrl})
+              {templateUrl : '/trade.html', controller : mainController})
         .otherwise({redirectTo : '/trades'});
   }
 ]);
