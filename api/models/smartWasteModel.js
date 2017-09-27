@@ -14,20 +14,13 @@ var TradeSchema = new Schema({
       type : String,
       required : 'Kindly enter the extern origin of the deposit'
     },
-    destiny :
-        {type : String, required : 'Kindly enter the destiny of the deposit'}
+    destiny : {type : String}
   },
-  movement : {
-    origin :
-        {type : String, required : 'Kindly enter the origin of the movement'},
-    destiny :
-        {type : String, required : 'Kindly enter the destiny of the movement'}
-  },
+  movement : {origin : {type : String}, destiny : {type : String}},
   waste : {
     type : {type : String, enum : [ 'deposit', 'waste', 'movement' ]},
     subtype : {type : String, enum : [ 'deposit', 'waste', 'movement' ]},
-    origin :
-        {type : String, required : 'Kindly enter the origin of the waste'}
+    origin : {type : String}
   }
 });
 
