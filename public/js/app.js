@@ -7,7 +7,7 @@ angular.module('angularSmartWaste', []).config([
             {templateUrl : 'partials/trades.html', controller : mainController})
         .when(
             '/trades/:tradeId',
-            {templateUrl : 'partials/trade.html', controller : tradeController})
+            {templateUrl : 'partials/trade.html', controller : mainController})
         .when('/newtrade', {
           templateUrl : 'partials/newtrade.html',
           controller : mainController
