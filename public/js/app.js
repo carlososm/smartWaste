@@ -5,10 +5,9 @@ angular.module('angularSmartWaste', []).config([
         .when(
             '/trades',
             {templateUrl : 'partials/trades.html', controller : mainController})
-        .when('/trades/:tradeId', {
-          templateUrl : 'partials/trade.html',
-          controller : tradeController(: tradeId)
-        })
+        .when(
+            '/trades/:tradeId',
+            {templateUrl : 'partials/trade.html', controller : tradeController})
         .when('/newtrade', {
           templateUrl : 'partials/newtrade.html',
           controller : mainController
@@ -17,6 +16,10 @@ angular.module('angularSmartWaste', []).config([
   }
 ]);
 
-// angular.module('pollServices', ['ngResource']). factory('Poll',
-// function($resource) { return $resource('polls/:pollId', {}, { query: {
-// method: 'GET', params: { pollId: 'polls' }, isArray: true } }) });
+angular.module('tradeServices', [ 'ngResource' ])
+    .factory('Trade', function($resource) {
+      return $resource('trades/:tradeId', {}, {
+        query :
+            {method : 'GET', params : {tradeId : 'trades'}, isArray : true}
+      })
+    });

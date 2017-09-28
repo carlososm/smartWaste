@@ -21,15 +21,27 @@ function mainController($scope, $http) {
   };
 }
 
-function tradeController($scope, $http, tradeId) {
+function PollItemCtrl($scope, $routeParams, Poll) {
+  $scope.poll = Poll.get({pollId : $routeParams.pollId});
+  $scope.vote = function() {};
+}
 
-  // Muestra un TRADE despues de checkearlo como acabado
-  $http.get('/trades/' + tradeId)
-      .success(function(data) {
-        $scope.trades = data;
-        console.log(data);
-      })
-      .error(function(data) { console.log('Error 3:' + data); });
+function tradeController($scope, $http, Trade) {
+
+  $scope.trade = Trade.get({tradeId : $http.tradeId})
+                     .success(function(data) {
+                       $scope.trade = data;
+                       console.log(data);
+                     })
+                     .error(function(data) { console.log('Error 3:' + data); });
+
+  // // Muestra un TRADE despues de checkearlo como acabado
+  // $http.get('/trades/' + tradeId)
+  //     .success(function(data) {
+  //       $scope.trades = data;
+  //       console.log(data);
+  //     })
+  //     .error(function(data) { console.log('Error 3:' + data); });
 
   // Borra un TRADE despues de checkearlo como acabado
   $scope.deleteTrade = function(id) {
