@@ -1,12 +1,16 @@
 angular.module('angularSmartWaste', []).config([
   '$routeProvider',
-  function($routeProvider) {
+  function($routeProvider, $locationProvider) {
     $routeProvider
+        .when('/trades', {
+          templateUrl : '/partials/trades.html',
+          controller : mainController
+        })
         .when(
-            '/trades',
-            {templateUrl : '/public/trades.html', controller : mainController})
-        .when('/trades/:tradeId',
-              {templateUrl : '/public/trade.html', controller : mainController})
+            '/trades/:tradeId',
+            {templateUrl : '/partials/trade.html', controller : mainController})
         .otherwise({redirectTo : '/trades'});
+
+    $locationProvider.html5Mode(true);
   }
 ]);
