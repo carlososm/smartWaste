@@ -21,7 +21,7 @@ function mainController($scope, $http) {
   };
 }
 
-function tradeController($scope, $http, trade) {
+function tradeController($scope, $http) {
 
   // Muestra un TRADE despues de checkearlo como acabado
   $http.get('/trades/' + trade._id)
