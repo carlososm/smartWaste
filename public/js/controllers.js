@@ -19,7 +19,9 @@ function mainController($scope, $http) {
         })
         .error(function(data) { console.log('Error 2:' + data); });
   };
+}
 
+function tradeController($scope, $http) {
   // Muestra un TRADE despues de checkearlo como acabado
   $scope.showTrade = function(id) {
     console.log('ID: ' + id);
