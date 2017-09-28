@@ -22,7 +22,6 @@ function mainController($scope, $http) {
 
   // Muestra un TRADE despues de checkearlo como acabado
   $scope.showTrade = function(id) {
-    console.log('ID: ' + id);
     $http.get('/trades/' + id)
         .success(function(data) {
           $scope.trades = data;
