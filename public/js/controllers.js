@@ -19,19 +19,17 @@ function mainController($scope, $http) {
         })
         .error(function(data) { console.log('Error 2:' + data); });
   };
-
-  // Muestra un TRADE despues de checkearlo como acabado
-  $scope.showTrade = function(id) {
-    $http.get('/trades/' + id)
-        .success(function(data) {
-          $scope.trades = data;
-          console.log(data);
-        })
-        .error(function(data) { console.log('Error 3:' + data); });
-  };
 }
 
-function tradeController($scope, $http) {
+function tradeController($scope, $http, trade) {
+
+  // Muestra un TRADE despues de checkearlo como acabado
+  $http.get('/trades/' + trade._id)
+      .success(function(data) {
+        $scope.trades = data;
+        console.log(data);
+      })
+      .error(function(data) { console.log('Error 3:' + data); });
 
   // Borra un TRADE despues de checkearlo como acabado
   $scope.deleteTrade = function(id) {
