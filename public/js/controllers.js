@@ -21,11 +21,6 @@ function mainController($scope, $http) {
   };
 }
 
-function PollItemCtrl($scope, $routeParams, Poll) {
-  $scope.poll = Poll.get({pollId : $routeParams.pollId});
-  $scope.vote = function() {};
-}
-
 function tradeController($scope, $http, Trade) {
 
   $scope.trade = Trade.get({tradeId : $http.tradeId})
