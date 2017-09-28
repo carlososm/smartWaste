@@ -21,22 +21,16 @@ function mainController($scope, $http) {
   };
 }
 
-function tradeController($scope, $http, Trade) {
-
-  $scope.trade = Trade.get({tradeId : $http.tradeId})
-                     .success(function(data) {
-                       $scope.trade = data;
-                       console.log(data);
-                     })
-                     .error(function(data) { console.log('Error 3:' + data); });
+function tradeController($scope, $http, $routeParams) {
+  var tradeId = $routeParams.id;
 
   // // Muestra un TRADE despues de checkearlo como acabado
-  // $http.get('/trades/' + tradeId)
-  //     .success(function(data) {
-  //       $scope.trades = data;
-  //       console.log(data);
-  //     })
-  //     .error(function(data) { console.log('Error 3:' + data); });
+  $http.get('/trades/' + tradeId)
+      .success(function(data) {
+        $scope.trades = data;
+        console.log(data);
+      })
+      .error(function(data) { console.log('Error 3:' + data); });
 
   // Borra un TRADE despues de checkearlo como acabado
   $scope.deleteTrade = function(id) {
