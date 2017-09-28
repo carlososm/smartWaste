@@ -22,9 +22,8 @@ function mainController($scope, $http) {
 }
 
 function tradeController($scope, $http, $routeParams) {
-  console.log(id);
   var tradeId = $routeParams._id;
-
+  console.log(tradeId);
   // // Muestra un TRADE despues de checkearlo como acabado
   $http.get('/trades/' + tradeId)
       .success(function(data) {
