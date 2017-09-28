@@ -7,7 +7,7 @@ module.exports = function(app) {
       .get(smartWaste.list_all_trades)
       .post(smartWaste.create_a_trade);
 
-  app.route('/trades/:id')
+  app.route('/trades/:tradeId')
       .get(smartWaste.read_a_trade)
       .put(smartWaste.update_a_trade)
       .delete(smartWaste.delete_a_trade);
