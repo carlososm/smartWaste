@@ -1,6 +1,6 @@
 angular.module('angularSmartWaste', []).config([
   '$routeProvider',
-  function($routeProvider, $locationProvider) {
+  function($routeProvider) {
     $routeProvider
         .when(
             '/trades',
@@ -9,7 +9,5 @@ angular.module('angularSmartWaste', []).config([
             '/trades/:tradeId',
             {templateUrl : 'partials/trade.html', controller : mainController})
         .otherwise({redirectTo : '/trades'});
-
-    $locationProvider.html5Mode(true);
   }
 ]);
