@@ -20,8 +20,9 @@ function mainController($scope, $http) {
         .error(function(data) { console.log('Error 2:' + data); });
   };
 
-  // Borra un TRADE despues de checkearlo como acabado
+  // Muestra un TRADE despues de checkearlo como acabado
   $scope.showTrade = function(id) {
+    console.log(id);
     $http.get('/trades/' + id)
         .success(function(data) {
           $scope.trades = data;
