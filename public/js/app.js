@@ -8,6 +8,10 @@ angular.module('angularSmartWaste', []).config([
         .when(
             '/trades/:tradeId',
             {templateUrl : 'partials/trade.html', controller : tradeController})
+        .when('/newtrade', {
+          templateUrl : 'partials/newtrade.html',
+          controller : mainController
+        })
         .otherwise({redirectTo : '/trades'});
   }
 ]);
