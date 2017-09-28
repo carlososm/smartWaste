@@ -21,10 +21,10 @@ function mainController($scope, $http) {
   };
 }
 
-function tradeController($scope, $http) {
+function tradeController($scope, $http, tradeId) {
 
   // Muestra un TRADE despues de checkearlo como acabado
-  $http.get('/trades/' + trade._id)
+  $http.get('/trades/' + tradeId)
       .success(function(data) {
         $scope.trades = data;
         console.log(data);

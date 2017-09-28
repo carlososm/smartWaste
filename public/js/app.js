@@ -5,9 +5,10 @@ angular.module('angularSmartWaste', []).config([
         .when(
             '/trades',
             {templateUrl : 'partials/trades.html', controller : mainController})
-        .when(
-            '/trades/:tradeId',
-            {templateUrl : 'partials/trade.html', controller : tradeController})
+        .when('/trades/:tradeId', {
+          templateUrl : 'partials/trade.html',
+          controller : tradeController(: tradeId)
+        })
         .when('/newtrade', {
           templateUrl : 'partials/newtrade.html',
           controller : mainController
