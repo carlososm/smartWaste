@@ -22,7 +22,7 @@ function mainController($scope, $http) {
 }
 
 function tradeController($scope, $http, $routeParams) {
-  var tradeId = $routeParams._id;
+  var tradeId = $routeParams.tradeId;
   console.log(tradeId);
   // // Muestra un TRADE despues de checkearlo como acabado
   $http.get('/trades/' + tradeId)
