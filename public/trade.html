@@ -89,64 +89,12 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Mi actividad</h2>
-          <a href="./newtrade.html" class="btn btn-default btn-lg">
-              <i class="fa fa-plus fa-fw"></i>
-              <span class="network-name">Crear nueva</span>
-            </a>
-          <a id="activity-filter-btn" class="btn btn-default btn-lg">
-                  <i class="fa fa-filter fa-fw"></i>
-                  <span class="network-name">Filtro de actividades </span>
-                </a>
-
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Origen/destino</a></li>
-                <li><a href="#">Concepto</a></li>
-                <li><a href="#">Cantidad</a></li>
-              </ul>
-            </div>
-            <!-- /btn-group -->
-            <input type="text" class="form-control" aria-label="..." placeholder="Text searched trade ...">
-            <span class="input-group-btn">
-              <button class="btn btn-default btn-lg" type="button">Go!</button>
-            </span>
-          </div>
-          <!-- /input-group -->
-
-
-          <table>
-            <tr>
-              <th class="hidden">_id</th>
-              <th>Tipo</th>
-              <th>Concepto</th>
-              <th>Cantidad</th>
-              <th>Fecha</th>
-              <th>Tipo</th>
-              <th>Subtipo</th>
-              <th>Origen</th>
-              <th>Destino</th>
-              <th></th>
-            </tr>
-            <tr ng-repeat="trade in trades">
-              <td class="hidden">{{trade._id}}</td>
-              <td>{{trade.type}}</td>
-              <td>{{trade.concept}}</td>
-              <td>{{trade.amount}}</td>
-              <td>Date</td>
-              <td>Tipo</td>
-              <td>Subtipo</td>
-              <td>{{trade.deposit.origin}}</td>
-              <td>{{trade.deposit.destiny}}</td>
-              <td><a href="trade.html"><i class="fa fa-eye" ng-click="showTrade(trade._id)"></i></a></td>
-            </tr>
-          </table>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- Footer -->
   <footer>

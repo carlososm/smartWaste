@@ -183,8 +183,12 @@ input[type="checkbox"]:focus{
     outline: none;
 }
 
-input, textarea {
+input, textarea, .input-group {
   margin: 10px;
+}
+
+.input-group input {
+  margin: 0px;
 }
 
 .icons button {
