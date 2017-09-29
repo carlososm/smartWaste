@@ -23,15 +23,15 @@ app.use(bodyParser.json());
 //   res.status(404).send({url : req.originalUrl + ' not found'})
 // });
 
-app.configure(function() {
-  app.use(express.static(__dirname + '/public')); // Catch static files
-  app.use(function(req, res, next) {
-    if (req.url == '/index') {
-      next();
-    } else {
-      res.redirect('/index.html');
-    }
-  });
+// app.use(express.static(path.join(__dirname, '/public/')));
+
+app.use(express.static(__dirname + '/public')); // Catch static files
+app.use(function(req, res, next) {
+  if (req.url == '/view') {
+    next();
+  } else {
+    res.redirect('/index.html');
+  }
 });
 
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
