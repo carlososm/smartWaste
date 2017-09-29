@@ -10,7 +10,7 @@ exports.create_a_cont = function(req, res) {
   new_cont.save(function(err, cont) {
     if (err)
       res.send(err);
-    res.json(cont);
+    res.send(cont);
   });
 };
 
@@ -18,7 +18,7 @@ exports.read_a_cont = function(req, res) {
   Contability.findById(req.params.contId, function(err, cont) {
     if (err)
       res.send(err);
-    res.json(cont);
+    res.send(cont);
   });
 };
 
@@ -27,7 +27,7 @@ exports.update_a_cont = function(req, res) {
                                {new : true}, function(err, cont) {
                                  if (err)
                                    res.send(err);
-                                 res.json(cont);
+                                 res.send(cont);
                                });
 };
 
@@ -35,7 +35,7 @@ exports.delete_a_cont = function(req, res) {
   Contability.remove({_id : req.params.contId}, function(err, cont) {
     if (err)
       res.send(err);
-    res.json({message : 'Contability successfully deleted'});
+    res.send({message : 'Contability successfully deleted'});
   });
 };
 
@@ -44,7 +44,7 @@ exports.list_all_trades = function(req, res) {
   Trade.find({}, function(err, trade) {
     if (err)
       res.send(err);
-    res.json(trade);
+    res.send(trade);
   });
 };
 
@@ -53,7 +53,7 @@ exports.create_a_trade = function(req, res) {
   new_trade.save(function(err, trade) {
     if (err)
       res.send(err);
-    res.json(trade);
+    res.send(trade);
   });
 };
 
@@ -61,7 +61,7 @@ exports.read_a_trade = function(req, res) {
   Trade.findById(req.params.tradeId, function(err, trade) {
     if (err)
       res.send(err);
-    res.json(trade);
+    res.send(trade);
   });
 };
 
@@ -70,7 +70,7 @@ exports.update_a_trade = function(req, res) {
                          function(err, trade) {
                            if (err)
                              res.send(err);
-                           res.json(trade);
+                           res.send(trade);
                          });
 };
 
@@ -78,7 +78,7 @@ exports.delete_a_trade = function(req, res) {
   Trade.remove({_id : req.params.tradeId}, function(err, trade) {
     if (err)
       res.send(err);
-    res.json({message : 'Trade successfully deleted'});
+    res.send({message : 'Trade successfully deleted'});
   });
 };
 
@@ -87,7 +87,7 @@ exports.list_all_accounts = function(req, res) {
   Trade.find({}, function(err, trade) {
     if (err)
       res.send(err);
-    res.json(trade);
+    res.send(trade);
   });
 };
 
@@ -96,7 +96,7 @@ exports.create_an_account = function(req, res) {
   new_trade.save(function(err, trade) {
     if (err)
       res.send(err);
-    res.json(trade);
+    res.send(trade);
   });
 };
 
@@ -104,7 +104,7 @@ exports.read_an_account = function(req, res) {
   Trade.findById(req.params.tradeId, function(err, trade) {
     if (err)
       res.send(err);
-    res.json(trade);
+    res.send(trade);
   });
 };
 
@@ -113,7 +113,7 @@ exports.update_an_account = function(req, res) {
                          function(err, trade) {
                            if (err)
                              res.send(err);
-                           res.json(trade);
+                           res.send(trade);
                          });
 };
 
@@ -121,6 +121,6 @@ exports.delete_an_account = function(req, res) {
   Trade.remove({_id : req.params.tradeId}, function(err, trade) {
     if (err)
       res.send(err);
-    res.json({message : 'Account successfully deleted'});
+    res.send({message : 'Account successfully deleted'});
   });
 };
