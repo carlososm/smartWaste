@@ -1,6 +1,6 @@
 function mainController($scope, $http) {}
 
-function mTradeController($scope, $http) {
+function mTradesController($scope, $http) {
   $scope.formData = {};
 
   // Cuando se cargue la página, pide del API trades los trades
