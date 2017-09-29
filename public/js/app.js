@@ -6,29 +6,29 @@ angular.module('angularSmartWaste', []).config([
               {templateUrl : 'partials/home.html', controller : mainController})
         .when('/new',
               {templateUrl : 'partials/new.html', controller : newController})
-        .when('/:contId/trades', {
+        .when('/contId/trades', {
           templateUrl : 'partials/trades.html',
           controller : mTradesController
         })
         .when(
-            '/:contId/trades/:tradeId',
+            '/contId/trades/:tradeId',
             {templateUrl : 'partials/trade.html', controller : tradeController})
-        .when('/:contId/newtrade', {
+        .when('/contId/newtrade', {
           templateUrl : 'partials/newtrade.html',
           controller : mTradesController
         })
-        .when('/:contId/accounts', {
+        .when('/contId/accounts', {
           templateUrl : 'partials/accounts.html',
           controller : mAccountsController
         })
-        .when('/:contId/accounts/:accountId', {
+        .when('/contId/accounts/:accountId', {
           templateUrl : 'partials/account.html',
           controller : accountController
         })
-        .when('/:contId/newaccount', {
+        .when('/contId/newaccount', {
           templateUrl : 'partials/newaccount.html',
           controller : mAccountsController
         })
-        .otherwise({redirectTo : '/:contId'});
+        .otherwise({redirectTo : '/contId'});
   }
 ]);

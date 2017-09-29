@@ -26,7 +26,6 @@ h6 {
 
 .list-inline-item, .list-inline-item:not(:last-child) {
   width: 90%;
-  margin-right: auto;
   margin-top: 10px;
 }
 
