@@ -1,4 +1,6 @@
-function mainController($scope, $http) {
+function mainController($scope, $http) {}
+
+function mTradeController($scope, $http) {
   $scope.formData = {};
 
   // Cuando se cargue la página, pide del API trades los trades
@@ -40,4 +42,18 @@ function tradeController($scope, $http, $routeParams) {
         })
         .error(function(data) { console.log('Error 4:' + data); });
   };
+
+  // Edita un TRADE despues de checkearlo como acabado
+  $scope.updateTrade = function(id) {
+    $http.update('/trades/' + id, $scope.trades)
+        .success(function(data) {
+          $scope.trades = data;
+          console.log(data);
+        })
+        .error(function(data) { console.log('Error 4:' + data); });
+  };
 }
+
+function mAccountsController($scope, $http) {}
+
+function accountController($scope, $http) {}
