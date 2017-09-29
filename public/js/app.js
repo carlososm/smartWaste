@@ -1,6 +1,10 @@
 angular.module('angularSmartWaste', [])
     .config(function($routeProvider, $locationProvider) {
       $routeProvider
+          .when('/', {
+            templateUrl : 'partials/intro.html',
+            controller : mainController
+          })
           .when(
               '/contId',
               {templateUrl : 'partials/home.html', controller : mainController})
@@ -30,7 +34,7 @@ angular.module('angularSmartWaste', [])
             templateUrl : 'partials/newaccount.html',
             controller : mAccountsController
           })
-          .otherwise({redirectTo : '/contId'});
+          .otherwise({redirectTo : '/'});
 
       $locationProvider.html5Mode(true);
     });
