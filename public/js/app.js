@@ -1,4 +1,4 @@
-angular.module('angularSmartWaste', [ 'ngRoute' ])
+angular.module('angularSmartWaste', [])
     .config(function($routeProvider, $locationProvider) {
       $routeProvider
           .when(
