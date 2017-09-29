@@ -7,7 +7,7 @@ function mainController($scope, $http, $routeParams) {
   //       console.log(data);
   //     })
   //     .error(function(data) { console.log('Error 3:' + data); });
-  $("#activity-filter-btn").click(function() {
+  $("#account-filter-btn").click(function() {
     $("#activity-filter").toggleClass("filter-hidden");
     $("#activity-filter").removeClass("hidden");
     $("#account-filter").addClass("filter-hidden");
