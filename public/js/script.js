@@ -93,7 +93,23 @@ $("#newMovement").click(function() {
 });
 
 })(jQuery);
-
+document.getElementById('account-filter-btn').click(function() {
+  alert();
+  // $("#account-filter").toggleClass("filter-hidden");
+  // $("#account-filter").removeClass("hidden");
+  // $("#activity-filter").addClass("filter-hidden");
+  // $("#activity-filter").addClass("hidden");
+  // $("#account-filter")
+  //     .bind("animationend webkitAnimationnd oAnimationEnd MSAnimationEnd",
+  //           function() {
+  //             if ($(this).hasClass("filter-hidden")) {
+  //               $(this).addClass("hidden");
+  //             } else {
+  //               $(this).removeClass("hidden")
+  //             }
+  //           });
+  // $("body").toggleClass("no-scroll");
+});
 $(document).ready(function() {
   $('#initialTime').val(new Date().toDateInputValue());
 });
