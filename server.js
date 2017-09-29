@@ -23,7 +23,16 @@ app.use(bodyParser.json());
 //   res.status(404).send({url : req.originalUrl + ' not found'})
 // });
 
-app.use(express.static(path.join(__dirname, '/public/')));
+app.configure(function() {
+  app.use(express.static(__dirname + '/public')); // Catch static files
+  app.use(function(req, res, next) {
+    if (req.url == '/index') {
+      next();
+    } else {
+      res.redirect('/index.html');
+    }
+  });
+});
 
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
 routes(app);                                           // register the route
