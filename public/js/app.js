@@ -1,6 +1,4 @@
-var angularSmartWaste = angular.module('angularSmartWaste', [ 'ngRoute' ]);
-
-angularSmartWaste.config(function($routeProvider, $locationProvider) {
+angular.module('angularSmartWaste', [ 'ngRoute' ]).config(function($routeProvider, $locationProvider) {
   $routeProvider
       .when('/contId',
             {templateUrl : 'partials/home.html', controller : mainController})
