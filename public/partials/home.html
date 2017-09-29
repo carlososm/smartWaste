@@ -4,7 +4,7 @@
     <div class="container">
       <h2>Posición global</h2>
       <div class="row">
-        <div class="col-lg-6 mx-auto">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
           <div class="card">
             <div class="title-card">
               <h3>Mi actividad reciente</h3>
@@ -48,7 +48,7 @@
 
           </div>
         </div>
-        <div class="col-lg-6 mx-auto">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
           <div class="card">
             <div class="title-card">
               <h3>Mis cuentas</h3>
@@ -100,7 +100,7 @@
   <div class="filter-info">
     <h4>Filtro actividades</h4>
     <hr>
-    <form id="activity-filter">
+    <form id="activity-filter-form">
       <h6>Tipo de actividad</h6>
       <input type="checkbox" name="activity" value="allActivities" id="allActivities" class="cb"><label for="allActivities">Todas</label><br>
       <input type="checkbox" name="activity" value="entry" id="entry" class="cb"><label for="entry">Ingresos</label><br>
@@ -126,26 +126,22 @@
 <section id="activity" class="content-section text-center">
   <div class="container">
     <h2>Mi actividad reciente</h2>
-    <ul class="list-inline">
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <li class="list-inline-item">
-          <a href="#trades" class="btn btn-default btn-lg">
+    <ul class="list-inline row">
+      <li class="list-inline-item col-lg-4 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
+        <a href="#trades" class="btn btn-default btn-lg">
             <i class="fa fa-user-plus fa-fw"></i>
             <span class="">Gestor Actividades</span>
           </a>
-        </li>
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <li class="list-inline-item">
-          <a id="activity-filter-btn" href="#trades" class="btn btn-default btn-lg">
+      </li>
+      <li class="list-inline-item col-lg-4  col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
+        <a id="activity-filter-btn" href="#activity-filter" class="btn btn-default btn-lg">
             <i class="fa fa-filter fa-fw"></i>
             <span class="">Filtro Actividades</span>
           </a>
-        </li>
-      </div>
+      </li>
     </ul>
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 mx-auto">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 mx-auto">
         <div class="card">
           <div class="title-card">
             <h3>Ingresos</h3>
@@ -192,7 +188,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-2 mx-auto">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 mx-auto">
         <div class="card">
           <div class="title-card">
             <h3>Gastos</h3>
@@ -255,7 +251,7 @@
   <div class="filter-info">
     <h4>Filtro de cuentas</h4>
     <hr>
-    <form id="activity-filter">
+    <form id="activity-filter-form">
       <h6>Cuentas a mostrar</h6>
       <input type="checkbox" name="account" value="cuenta1" id="allAccounts" class="cb"><label for="allAccounts">Todas</label><br>
       <input type="checkbox" name="account" value="cuenta1" id="cuenta1" class="cb"><label for="cuenta1">Cuenta1</label><br>
@@ -275,14 +271,21 @@
 <section id="accounts" class="image-section content-section text-center">
   <div class="container">
     <h2>Mis cuentas</h2>
-    <a href="#accounts" class="btn btn-default btn-lg">
-        <i class="fa fa-plus fa-fw"></i>
-        <span class="network-name">Gestor de cuentas </span>
-      </a>
-    <a id="account-filter-btn" class="btn btn-default btn-lg">
-          <i class="fa fa-filter fa-fw"></i>
-          <span class="network-name">Filtro de cuentas </span>
-        </a>
+    <ul class="list-inline row">
+      <li class="list-inline-item col-lg-4 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
+        <a href="#accounts" class="btn btn-default btn-lg">
+            <i class="fa fa-user-plus fa-fw"></i>
+            <span class="">Gestor de Cuentas</span>
+          </a>
+      </li>
+      <li class="list-inline-item col-lg-4  col-lg-offset-2 col-md-12 col-sm-12 col-xs-12">
+        <a id="account-filter-btn" href="#account-filter" class="btn btn-default btn-lg">
+            <i class="fa fa-filter fa-fw"></i>
+            <span class="">Filtro de Cuentas</span>
+          </a>
+      </li>
+    </ul>
+
     <div class="row">
       <div class="col-lg-6 mx-auto">
         <div class="card">
