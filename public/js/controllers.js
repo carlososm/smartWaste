@@ -1,5 +1,7 @@
 function mainController($scope, $http) {}
 
+function newController($scope, $http) {}
+
 function mTradesController($scope, $http) {
   $scope.formData = {};
 

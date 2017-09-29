@@ -2,8 +2,10 @@ angular.module('angularSmartWaste', []).config([
   '$routeProvider',
   function($routeProvider) {
     $routeProvider
-        .when('/cont',
+        .when('/contId',
               {templateUrl : 'partials/home.html', controller : mainController})
+        .when('/new',
+              {templateUrl : 'partials/home.html', controller : newController})
         .when('/:contId/trades', {
           templateUrl : 'partials/trades.html',
           controller : mTradesController
