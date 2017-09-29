@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="angularSmartWaste">
 
 <head>
 
@@ -9,6 +9,8 @@
   <meta name="author" content="carlososm">
 
   <title>Smart Waste | carlososm</title>
+
+  <base href="/">
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,39 +28,35 @@
 
 <body id="page-top">
 
-  <!-- Intro Header -->
-  <header class="masthead">
-    <div class="intro-body">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 mx-auto">
-            <h1 class="brand-heading">smart WASTE</h1>
-            <p class="intro-text">Un aplicación para gestionar de manera inteligente tus gastos y tus ingresos. Controla tu dinero de manera más inteligente.</p>
-            <p class="intro-text">Crea tu propia contabilidad o entra en una ya existente</p>
-            <ul class="list-inline">
-              <li class="list-inline-item col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                <a href="./intro.html/new" class="btn btn-default btn-lg">
-                    <i class="fa fa-user-plus fa-fw"></i>
-                    <span class="">Crear nueva</span>
-                  </a>
-              </li>
-              <li class="list-inline-item col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="'Contability' name ...">
-                  <span class="input-group-btn">
-                    <a href="./intro.html/:contId">
-                    <button class="btn btn-default btn-lg" type="button"><i class="fa fa-check fa-fw"></i></button>
-                  </a>
-                  </span>
-                </div>
-                <!-- /input-group -->
-              </li>
-            </ul>
-          </div>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img alt="Brand" src="./img/my-brand__ligth.png" style="width: 30px; height: 30px;"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#global">Posición global</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#activity">Mi actividad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#accounts">Mis cuentas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#plots">Gráficos</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
+
+  <div ng-view>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -75,12 +73,19 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- angularJS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+
   <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/angular-loadscript.js"></script>
+  <script src="js/script.js" type="text/javascript-lazy"></script>
 
 </body>
 
