@@ -1,7 +1,7 @@
 function mainController($scope, $http, $routeParams) {
   var contId = $routeParams.contId;
   // // Muestra un TRADE despues de checkearlo como acabado
-  $http.get('/trades/' + tradeId)
+  $http.get('/trades/' + countId)
       .success(function(data) {
         $scope.trades = data;
         console.log(data);
