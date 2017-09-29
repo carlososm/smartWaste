@@ -22,7 +22,7 @@ module.exports = function(app) {
 
   // smartWaste account Routes
   app.route('/accounts')
-      .get(smartWaste.list_all_account)
+      .get(smartWaste.list_all_accounts)
       .post(smartWaste.create_an_account);
 
   app.route('/account/:accountId')
