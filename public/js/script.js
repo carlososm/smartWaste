@@ -94,7 +94,7 @@ $("#newMovement").click(function() {
 
 })(jQuery);
 
-document.getElementById('account-filter-btn').click(function) {
+document.getElementById('account-filter-btn').click(function() {
   alert();
   $("#account-filter").toggleClass("filter-hidden");
   $("#account-filter").removeClass("hidden");
