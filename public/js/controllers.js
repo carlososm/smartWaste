@@ -1,12 +1,12 @@
 function mainController($scope, $http, $routeParams) {
-  var contId = $routeParams.contId;
-  // // Muestra un TRADE despues de checkearlo como acabado
-  $http.get('/trades/' + contId)
-      .success(function(data) {
-        $scope.trades = data;
-        console.log(data);
-      })
-      .error(function(data) { console.log('Error 3:' + data); });
+  // var contId = $routeParams.contId;
+  // // // Muestra un TRADE despues de checkearlo como acabado
+  // $http.get('/trades/' + contId)
+  //     .success(function(data) {
+  //       $scope.trades = data;
+  //       console.log(data);
+  //     })
+  //     .error(function(data) { console.log('Error 3:' + data); });
 }
 
 function newController($scope, $http) {}
