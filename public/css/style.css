@@ -23,6 +23,16 @@ h6 {
   visibility: hidden;
   display: none;
 }
+
+.list-inline-item, .list-inline-item:not(:last-child) {
+  width: 90%;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.btn-default {
+  width: 100%;
+}
 /** card **/
 
 .card {
@@ -183,8 +193,8 @@ input[type="checkbox"]:focus{
     outline: none;
 }
 
-input, textarea, .input-group {
-  margin: 10px;
+input, textarea {
+  margin: 0px 10px 0px 10px;
 }
 
 .input-group input {
