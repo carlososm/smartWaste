@@ -1,5 +1,5 @@
 function mainController($scope, $rootScope, $http, $routeParams) {
-  var contId = $scope.contId;
+  var contId = $scope.signinData.contId;
   $scope.searchCont =
       function() {
     $http.get('/api/' + contId)
