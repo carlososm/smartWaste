@@ -19,6 +19,9 @@ mongoose.connect('mongodb://localhost/smartWaste');
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
+var routes = require('./api/routes/smartWasteRoutes'); // importing route
+routes(app);
+
 // app.use(function(req, res) {
 //   res.status(404).send({url : req.originalUrl + ' not found'})
 // });
@@ -27,11 +30,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public')); // Catch static files
 
-app.get('/*',
-        function(req, res) { res.sendFile(__dirname + '/public/index.html') });
-
-var routes = require('./api/routes/smartWasteRoutes'); // importing route
-routes(app);                                           // register the route
+app.get('/*', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html')
+}); // register the route
 
 // app.listen(port);
 
