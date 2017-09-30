@@ -34,6 +34,8 @@ app.get('/[^\.]+$', function(req, res, next) {
   res.sendfile("index.html", {root : __dirname + '/public'});
 });
 
+app.all('/*', function(req, res) { res.sendfile('index.html'); });
+
 // app.listen(port);
 
 console.log('smart waste RESTful API server started on: ' + port);
