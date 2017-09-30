@@ -1,18 +1,36 @@
 function mainController($scope, $rootScope, $http, $routeParams) {
   $scope.signinData = {};
-  $scope.searchCont =
-      function() {
-    var contId = $scope.signinData.contId;
-    $http.get('/api/' + contId)
-        .success(function(data) {
+  var contId;
+
+  $scope.searchCont = function() {
+    contId = $scope.signinData.contId;
+    $rootScope.contId = contId;
+    $http.get('/api/contabilities/' + contId)
+        .success(function(data, err, status) {
           $scope.contability = data;
-          // console.log(data);
+          $("#wrong-signin-cont").addClass("hidden");
+          $("#signin-div").removeClass("hidden");
         })
-        .error(function(data) { console.log('Error 3:' + data); });
-  }
-      /** sign in control **/
-      $("#signin-intro")
-          .click(function() { $("#signin-div").toggleClass("hidden"); });
+        .error(function(data) {
+          $("#wrong-signin-cont").removeClass("hidden");
+          $("#signin-div").addClass("hidden");
+        });
+
+    $("#signin-div .close-btn").click(function() {
+      $("#signin-div").addClass("hidden");
+    })
+  };
+
+  // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
+  $scope.createCont = function() {
+    $http.post('/api/contabilities', $scope.contData)
+        .success(function(data) {
+          $scope.contData = {};
+          $scope.contabilities = data;
+          console.log(data);
+        })
+        .error(function(data) { console.log('Error 2:' + data); });
+  };
 }
 
 function contController($scope, $rootScope, $http, $routeParams) {
@@ -26,16 +44,6 @@ function contController($scope, $rootScope, $http, $routeParams) {
       })
       .error(function(data) { console.log('Error 3:' + data); });
 
-  // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
-  $scope.createCont = function() {
-    $http.post('/api/contabilities', $scope.contData)
-        .success(function(data) {
-          $scope.contData = {};
-          $scope.contabilities = data;
-          console.log(data);
-        })
-        .error(function(data) { console.log('Error 2:' + data); });
-  };
   /** filter control **/
   $("#account-filter-btn").click(function() {
     $("#activity-filter").toggleClass("filter-hidden");

@@ -152,9 +152,10 @@ tr:first-child {
 }
 
 .close-btn {
-  float: none;
-  text-align: right;
-  margin: 10px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
 }
 
 @import url(./css/font-awesome.min.css);

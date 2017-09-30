@@ -14,11 +14,29 @@ exports.create_a_cont = function(req, res) {
   });
 };
 
-exports.read_a_cont = function(req, res) {
-  Contability.findById(req.params.contId, function(err, cont) {
-    if (err)
+exports.search_a_cont = function(req, res) {
+  var ID = req.params.contId;
+  Contability.findOne({_id : ID}, function(err, cont) {
+    if (err) {
+      res.senStatus(401);
+    } else if (!cont) {
       res.sendStatus(400);
-    res.send(cont);
+    } else {
+      res.sendStatus(200);
+    }
+  });
+};
+
+exports.read_a_cont = function(req, res) {
+  var ID = req.params.contId;
+  Contability.findOne({_id : ID}, function(err, cont) {
+    if (err) {
+      res.json({status : 401, message : err});
+    } else if (!cont) {
+      res.json({status : 400, msg : "not found"});
+    } else {
+      res.json({status : 200, message : cont});
+    }
   });
 };
 

@@ -22,21 +22,32 @@
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Nombre de la 'contabilidad' ..." ng-model="signinData.contId">
                   <span class="input-group-btn">
-                      <button id="signin-intro" class="btn btn-default btn-lg" type="button"><i class="fa fa-check fa-fw"></i></button>
+                    <a href="#signin-div">
+                      <button id="signin-intro" class="btn btn-default btn-lg" type="button" ng-click="searchCont()"><i class="fa fa-check fa-fw"></i></button>
+                    </a>
                     </span>
                 </div>
               </li>
             </div>
           </ul>
           <div class="sign-in hidden" id="signin-div">
+            <div class="close-btn">
+              <i class="fa fa-times fa-2x fa-fw"></i>
+            </div>
             <form id="signin-form">
               <h6>Logueo<i class="fa fa-user fa-2x fa-fw"></i><h6>
               <input type="text" class="form-control" placeholder="Usuario" id="signin-user" ng-model="signinData.user"><br>
               <input type="text" class="form-control" placeholder="Contraseña" id="signin-pass" ng-model="signinData.pass"><br>
-              <!-- <a href="/{{signinData.contId}}"> -->
-                <button type="button" class="btn btn-default" id="signin" ng-click="searchCont()">Entrar</button>
-            <!-- </a> -->
+                <button type="button" class="btn btn-default" id="signin" ng-click="loginCont()">Entrar</button>
             </form>
+          </div>
+          <div id="wrong-signin-cont" class="alert alert-danger alert-dismissable fade in hidden">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>¡Error!</strong> La contabilidad a la que intenta acceder no existe.
+          </div>
+          <div id="wrong-signin-login" class="alert alert-danger alert-dismissable fade in hidden">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>¡Error!</strong> El usuario y/o contraseña con erroneos.
           </div>
 
 

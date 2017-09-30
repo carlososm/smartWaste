@@ -4,6 +4,7 @@ module.exports = function(app) {
 
   // smartWaste app Routes
   app.route('/api/contabilities').post(smartWaste.create_a_cont);
+  app.route('/api/contabilities/:contId').get(smartWaste.search_a_cont);
 
   app.route('/api/:contId')
       .get(smartWaste.read_a_cont)
