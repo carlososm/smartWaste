@@ -208,7 +208,7 @@ input, textarea {
     padding: 0;
 }
 
-.sing-in.btn, .filter .btn {
+.sing-in .btn, .filter .btn {
   border-color: black;
   color: black;
   margin: 20px 5px 20px 5px;
