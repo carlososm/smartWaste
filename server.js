@@ -26,13 +26,16 @@ app.use(bodyParser.json());
 // app.use(express.static(path.join(__dirname, '/public/')));
 
 app.use(express.static(__dirname + '/public')); // Catch static files
-app.use(function(req, res, next) {
-  if (req.url == '/public') {
-    next();
-  } else {
-    res.redirect('/index.html');
-  }
-});
+// app.use(function(req, res, next) {
+//   if (req.url == '/public') {
+//     next();
+//   } else {
+//     res.redirect('/index.html');
+//   }
+// });
+
+app.get('/*',
+        function(req, res) { res.sendFile(__dirname + '/public/index.html'); });
 
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
 routes(app);                                           // register the route
