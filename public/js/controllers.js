@@ -1,12 +1,6 @@
-app.run([
-  '$rootScope',
-  function($rootScope) {
-    $rootScope.contName = "";
-    $rootScope.contId = "";
-  }
-]);
+function mainController($scope, $rootScope, $http, $routeParams) {}
 
-function mainController($scope, $rootScope, $http, $routeParams) {
+function countController($scope, $rootScope, $http, $routeParams) {
   var contId = $scope.contId;
   $rootScope.contId = contId;
   console.log(contId);
