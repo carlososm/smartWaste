@@ -7,6 +7,13 @@ function mainController($scope, $http, $routeParams) {
   //       console.log(data);
   //     })
   //     .error(function(data) { console.log('Error 3:' + data); });
+
+  /** sign in control **/
+  $("#signin-intro").click(functio() {
+    $("#signin-div").toggleClass("hidden");
+  });
+
+  /** filter control **/
   $("#account-filter-btn").click(function() {
     $("#activity-filter").toggleClass("filter-hidden");
     $("#activity-filter").removeClass("hidden");
