@@ -1,19 +1,29 @@
 function mainController($scope, $rootScope, $http, $routeParams) {
-  /** sign in control **/
-  $("#signin-intro").click(function() {
-    $("#signin-div").toggleClass("hidden");
-  });
+  var contId = $routeParams.contId;
+  $scope.searchCont =
+      function() {
+    $http.get('/api/' + contId)
+        .success(function(data) {
+          $scope.contability = data;
+          // console.log(data);
+        })
+        .error(function(data) { console.log('Error 3:' + data); });
+  }
+      /** sign in control **/
+      $("#signin-intro")
+          .click(function() { $("#signin-div").toggleClass("hidden"); });
 }
 
 function contController($scope, $rootScope, $http, $routeParams) {
   var contId = $routeParams.contId;
   $rootScope.contId = contId;
   // // Muestra un CONTABILITY despues de checkearlo como acabado
-  $http.get('/api/' + contId).success(function(data) {
-    $scope.contability = data;
-    // console.log(data);
-  });
-  // .error(function(data) { console.log('Error 3:' + data); });
+  $http.get('/api/' + contId)
+      .success(function(data) {
+        $scope.contability = data;
+        // console.log(data);
+      })
+      .error(function(data) { console.log('Error 3:' + data); });
 
   // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
   $scope.createCont = function() {
