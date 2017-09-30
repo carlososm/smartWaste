@@ -5,16 +5,15 @@ function mainController($scope, $rootScope, $http, $routeParams) {
   });
 }
 
-function countController($scope, $rootScope, $http, $routeParams) {
+function contController($scope, $rootScope, $http, $routeParams) {
   var contId = $routeParams.contId;
   $rootScope.contId = contId;
   // // Muestra un CONTABILITY despues de checkearlo como acabado
-  $http.get('/api/' + contId)
-      .success(function(data) {
-        $scope.contability = data;
-        // console.log(data);
-      })
-      .error(function(data) { console.log('Error 3:' + data); });
+  $http.get('/api/' + contId).success(function(data) {
+    $scope.contability = data;
+    // console.log(data);
+  });
+  // .error(function(data) { console.log('Error 3:' + data); });
 
   // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
   $scope.createCont = function() {

@@ -11,7 +11,7 @@ var app = angular.module('angularSmartWaste', [])
                     })
                     .when('/:contId', {
                       templateUrl : 'partials/home.html',
-                      controller : countController
+                      controller : contController
                     })
                     .when('/:contId/trades', {
                       templateUrl : 'partials/trades.html',
