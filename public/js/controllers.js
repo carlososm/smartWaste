@@ -1,5 +1,5 @@
 function mainController($scope, $rootScope, $http, $routeParams) {
-  var contId = $routeParams.contId;
+  var contId = $scope.contId;
   $scope.searchCont =
       function() {
     $http.get('/api/' + contId)
