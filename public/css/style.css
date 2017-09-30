@@ -17,6 +17,7 @@ h6 {
 .form-control {
   border: solid 2px white;
   border-radius: 0;
+  height: 46px;
 }
 
 .hidden {
@@ -25,7 +26,7 @@ h6 {
 }
 
 .list-inline-item, .list-inline-item:not(:last-child) {
-  width: 90%;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -213,11 +214,10 @@ input, textarea {
   margin: 20px 5px 20px 5px;
 }
 
-#trades .input-group {
+.input-group {
   margin-bottom: 30px;
   margin-top: 15px;
-  width: 70%;
-  margin-left: 15%;
+  width: 100%;
 }
 
 /** newTrades **/
