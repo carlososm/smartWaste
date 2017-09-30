@@ -20,8 +20,6 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
 require('./api/routes/smartWasteRoutes')(app);
-// var routes = require('./api/routes/smartWasteRoutes'); // importing route
-// routes(app);
 
 // app.use(function(req, res) {
 //   res.status(404).send({url : req.originalUrl + ' not found'})
