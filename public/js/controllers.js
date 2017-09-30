@@ -9,7 +9,7 @@ app.run([
 function mainController($scope, $rootScope, $http, $routeParams) {
   var contId = $scope.contId;
   $rootScope.contId = contId;
-  console.log(conId);
+  console.log(contId);
   // // Muestra un CONTABILITY despues de checkearlo como acabado
   $http.get('/api/' + contId)
       .success(function(data) {
