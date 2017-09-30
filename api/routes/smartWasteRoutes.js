@@ -3,7 +3,7 @@ module.exports = function(app) {
   var smartWaste = require('../controllers/smartWasteController');
 
   // smartWaste app Routes
-  app.route('/contability').post(smartWaste.create_a_cont);
+  app.route('/contabilities').post(smartWaste.create_a_cont);
 
   app.route('/:contId')
       .get(smartWaste.read_a_cont)
