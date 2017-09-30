@@ -9,7 +9,7 @@ function mainController($scope, $http, $routeParams) {
   //     .error(function(data) { console.log('Error 3:' + data); });
 
   /** sign in control **/
-  $("#signin-intro").click(functio() {
+  $("#signin-intro").click(function() {
     $("#signin-div").toggleClass("hidden");
   });
 
