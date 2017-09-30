@@ -208,7 +208,7 @@ input, textarea {
     padding: 0;
 }
 
-.sing-in .btn, .filter .btn {
+.sign-in .btn, .filter .btn {
   border-color: black;
   color: black;
   margin: 20px 5px 20px 5px;
@@ -229,7 +229,7 @@ input, textarea {
 }
 
 /** signin **/
-.sing-in {
+.sign-in {
   position: absolute;
   width: 200px;
   height: 300px;
