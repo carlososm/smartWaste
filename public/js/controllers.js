@@ -1,8 +1,8 @@
 function mainController($scope, $rootScope, $http, $routeParams) {
   $scope.signinData = {};
-  var contId = $scope.signinData.contId;
   $scope.searchCont =
       function() {
+    var contId = $scope.signinData.contId;
     $http.get('/api/' + contId)
         .success(function(data) {
           $scope.contability = data;
