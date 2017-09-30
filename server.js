@@ -27,14 +27,9 @@ require('./api/routes/smartWasteRoutes')(app);
 
 app.use(express.static(path.join(__dirname, '/public/')));
 
-app.get('/[^\.]+$', function(req, res, next) {
-  if (NOT_ANGULAR_ROUTES) {
-    return next();
-  }
-  res.sendfile("index.html", {root : __dirname + '/public'});
-});
-
-app.all('/*', function(req, res) { res.sendfile('index.html'); });
+app.get('/*', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html')
+}); // register the route
 
 // app.listen(port);
 
