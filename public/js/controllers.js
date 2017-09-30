@@ -12,7 +12,7 @@ function countController($scope, $rootScope, $http, $routeParams) {
   $http.get('/api/' + contId)
       .success(function(data) {
         $scope.contability = data;
-        console.log(data);
+        // console.log(data);
       })
       .error(function(data) { console.log('Error 3:' + data); });
 
