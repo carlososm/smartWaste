@@ -1,4 +1,9 @@
-function mainController($scope, $rootScope, $http, $routeParams) {}
+function mainController($scope, $rootScope, $http, $routeParams) {
+  /** sign in control **/
+  $("#signin-intro").click(function() {
+    $("#signin-div").toggleClass("hidden");
+  });
+}
 
 function countController($scope, $rootScope, $http, $routeParams) {
   var contId = $scope.contId;
@@ -22,12 +27,6 @@ function countController($scope, $rootScope, $http, $routeParams) {
         })
         .error(function(data) { console.log('Error 2:' + data); });
   };
-
-  /** sign in control **/
-  $("#signin-intro").click(function() {
-    $("#signin-div").toggleClass("hidden");
-  });
-
   /** filter control **/
   $("#account-filter-btn").click(function() {
     $("#activity-filter").toggleClass("filter-hidden");
