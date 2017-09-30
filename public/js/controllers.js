@@ -89,7 +89,7 @@ function mTradesController($scope, $http) {
   $scope.formData = {};
 
   // Cuando se cargue la página, pide del API trades los trades
-  $http.get('/trades')
+  $http.get($rootScope + '/trades')
       .success(function(data) {
         $scope.trades = data;
         console.log(data)
