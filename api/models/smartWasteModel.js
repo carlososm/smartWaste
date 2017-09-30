@@ -21,7 +21,11 @@ var TradeSchema = new Schema({
 module.exports = mongoose.model('Trades', TradeSchema);
 
 var ContabilitySchema = new Schema({
-  name : {type : String, required : 'Kindly enter the name of the contability'},
+  name : {
+    type : String,
+    required : 'Kindly enter the name of the contability',
+    unique : true
+  },
   users : [
     {name : {type : String}, nicks : {type : String}, pass : {type : String}}
   ],

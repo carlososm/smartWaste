@@ -1,12 +1,23 @@
 function mainController($scope, $http, $routeParams) {
   var contId = $routeParams.contId;
-  // // Muestra un TRADE despues de checkearlo como acabado
+  // // Muestra un CONTABILITY despues de checkearlo como acabado
   $http.get('/' + contId)
       .success(function(data) {
         $scope.contability = data;
         console.log(data);
       })
       .error(function(data) { console.log('Error 3:' + data); });
+
+  // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
+  $scope.createTrade = function() {
+    $http.post('/contabilities', $scope.contData)
+        .success(function(data) {
+          $scope.contData = {};
+          $scope.contabilities = data;
+          console.log(data);
+        })
+        .error(function(data) { console.log('Error 2:' + data); });
+  };
 
   /** sign in control **/
   $("#signin-intro").click(function() {

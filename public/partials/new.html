@@ -1,0 +1,39 @@
+<section id="trade-form" class="content-section text-center">
+  <div class="container">
+    <h2>Crear una nueva contabilidad</h2>
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12 mx-auto">
+        <form>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-4">
+                <input type="text" class="form-control text-center" placeholder="Concepto" ng-model="contData.name">
+              </div>
+            </div>
+          </div>
+
+          <ul class="list-inline row">
+            <div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
+              <li class="list-inline-item">
+                <button class="btn btn-default btn-lg" ng-click="createCont()">
+                  <i class="fa fa-plus fa-fw"></i>
+                  <span class="">Añadir</span>
+                </button>
+                </a>
+              </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <li class="list-inline-item">
+                <button class="btn btn-default btn-wrong btn-lg">
+                  <i class="fa fa-filter fa-fw"></i>
+                  <span class="">Limpiar</span>
+                </button>
+              </li>
+            </div>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
