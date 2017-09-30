@@ -5,12 +5,12 @@ var app = angular.module('angularSmartWaste', [])
                       templateUrl : 'partials/intro.html',
                       controller : mainController
                     })
-                    .when('/:contId', {
-                      templateUrl : 'partials/home.html',
-                      controller : mainController
-                    })
                     .when('/new', {
                       templateUrl : 'partials/new.html',
+                      controller : mainController
+                    })
+                    .when('/:contId', {
+                      templateUrl : 'partials/home.html',
                       controller : mainController
                     })
                     .when('/:contId/trades', {
