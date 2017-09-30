@@ -11,7 +11,7 @@ module.exports = function(app) {
       .delete(smartWaste.delete_a_cont);
 
   // smartWaste trade Routes
-  app.route('/trades')
+  app.route('/:contId/trades')
       .get(smartWaste.list_all_trades)
       .post(smartWaste.create_a_trade);
 
