@@ -227,3 +227,11 @@ input, textarea {
   outline: none;
   background-color: #42DCA3;
 }
+
+/** signin **/
+.sign-in {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+}
