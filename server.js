@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 80;
 var mongoose = require('mongoose');
 var Trade =
     require('./api/models/smartWasteModel'); // created model loading here
