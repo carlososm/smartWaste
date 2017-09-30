@@ -1,4 +1,5 @@
 function mainController($scope, $rootScope, $http, $routeParams) {
+  $scope.signinData = {};
   var contId = $scope.signinData.contId;
   $scope.searchCont =
       function() {
