@@ -18,7 +18,7 @@ exports.read_a_cont = function(req, res) {
   Contability.findById(req.params.contId, function(err, cont) {
     if (err)
       res.sendStatus(400);
-    res.send('hi');
+    res.send(cont);
   });
 };
 
