@@ -8,7 +8,6 @@ function mainController($scope, $rootScope, $http, $routeParams) {
 function countController($scope, $rootScope, $http, $routeParams) {
   var contId = $routeParams.contId;
   $rootScope.contId = contId;
-  console.log(contId);
   // // Muestra un CONTABILITY despues de checkearlo como acabado
   $http.get('/api/' + contId)
       .success(function(data) {
