@@ -6,7 +6,7 @@ function mainController($scope, $rootScope, $http, $routeParams) {
 }
 
 function countController($scope, $rootScope, $http, $routeParams) {
-  var contId = $scope.contId;
+  var contId = $routeParams.contId;
   $rootScope.contId = contId;
   console.log(contId);
   // // Muestra un CONTABILITY despues de checkearlo como acabado
