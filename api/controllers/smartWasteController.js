@@ -17,7 +17,7 @@ exports.create_a_cont = function(req, res) {
 exports.read_a_cont = function(req, res) {
   Contability.findById(req.params.contId, function(err, cont) {
     if (err)
-      res.send(400);
+      res.sendStatus(400);
     res.send(cont);
   });
 };
