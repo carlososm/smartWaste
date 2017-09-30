@@ -19,8 +19,9 @@ mongoose.connect('mongodb://localhost/smartWaste');
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/smartWasteRoutes'); // importing route
-routes(app);
+require('./api/routes')(app);
+// var routes = require('./api/routes/smartWasteRoutes'); // importing route
+// routes(app);
 
 // app.use(function(req, res) {
 //   res.status(404).send({url : req.originalUrl + ' not found'})
