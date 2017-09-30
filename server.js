@@ -34,7 +34,7 @@ app.use(express.static(__dirname + '/public')); // Catch static files
 //   }
 // });
 
-app.get('/*',
+app.get('/public/*',
         function(req, res) { res.sendFile(__dirname + '/public/index.html'); });
 
 var routes = require('./api/routes/smartWasteRoutes'); // importing route
