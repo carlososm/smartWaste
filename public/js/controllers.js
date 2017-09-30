@@ -6,7 +6,7 @@ app.run([
   }
 ]);
 
-function mainController($scope, $rootScope, $http, $routeParams) {
+function mainController($scope, $rootScope, , $http, $routeParams) {
   var contId = $scope.contId;
   $rootScope.contId = contId;
   // // Muestra un CONTABILITY despues de checkearlo como acabado
@@ -83,9 +83,9 @@ function mainController($scope, $rootScope, $http, $routeParams) {
   });
 }
 
-function newController($scope, $http) {}
+function newController($scope, $rootScope, $http) {}
 
-function mTradesController($scope, $http) {
+function mTradesController($scope, $rootScope, $http) {
   $scope.formData = {};
 
   // Cuando se cargue la página, pide del API trades los trades
@@ -108,7 +108,7 @@ function mTradesController($scope, $http) {
   };
 }
 
-function tradeController($scope, $http, $routeParams) {
+function tradeController($scope, $rootScope, $http, $routeParams) {
   var tradeId = $routeParams.tradeId;
   // // Muestra un TRADE despues de checkearlo como acabado
   $http.get('/trades/' + tradeId)
@@ -139,6 +139,6 @@ function tradeController($scope, $http, $routeParams) {
   };
 }
 
-function mAccountsController($scope, $http) {}
+function mAccountsController($scope, $rootScope, $http) {}
 
-function accountController($scope, $http) {}
+function accountController($scope, $rootScope, $http) {}
