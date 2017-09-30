@@ -33,7 +33,9 @@
               <h6>Logueo<i class="fa fa-user fa-2x fa-fw"></i><h6>
               <input type="text" class="form-control" placeholder="Usuario" id="signin-user" ng-model="signinData.user"><br>
               <input type="text" class="form-control" placeholder="Contraseña" id="signin-pass" ng-model="signinData.pass"><br>
-              <button href="/{{signinData.contId}}" type="button" class="btn btn-default" id="signin" ng-click="">Entrar</button>
+              <a href="/{{signinData.contId}}">
+                <button type="button" class="btn btn-default" id="signin" ng-click="">Entrar</button>
+            </a>
             </form>
           </div>
 
