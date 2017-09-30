@@ -8,8 +8,9 @@ angular.module('angularSmartWaste', [])
           .when(
               '/contId',
               {templateUrl : 'partials/home.html', controller : mainController})
-          .when('/new',
-                {templateUrl : 'partials/new.html', controller : newController})
+          .when(
+              '/new',
+              {templateUrl : 'partials/new.html', controller : mainController})
           .when('/contId/trades', {
             templateUrl : 'partials/trades.html',
             controller : mTradesController
