@@ -6,8 +6,8 @@ app.run([
   }
 ]);
 
-function mainController($scope, $routeScope, $http, $routeParams) {
-  var contId = $scope.contId;
+function mainController($scope, $rootScope, $http, $routeParams) {
+  var contId = $scop.contId;
   $rootScope.contId = contId;
   // // Muestra un CONTABILITY despues de checkearlo como acabado
   $http.get('/' + contId)
