@@ -7,8 +7,19 @@
         <form>
           <div class="form-group">
             <div class="row">
-              <div class="col-lg-4">
-                <input type="text" class="form-control text-center" placeholder="Concepto" ng-model="contData._id">
+              <div class="col-lg-4 col-md-6 ol-sm-12 col-xs-12">
+                <input type="text" class="form-control text-center" placeholder="Nombre contabilidad" ng-model="contData._id">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-lg-offset-1 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-11 co-sm-offset-1 col-xs-11 col-xs-offset-1">
+                <input type="text" class="form-control text-center" placeholder="Nombre usuario" ng-model="contData.user.name">
+              </div>
+              <div class="col-lg-3 col-lg-offset-0 col-md-6 col-md-offset-1 col-sm-11 co-sm-offset-1 col-xs-11 col-xs-offset-1">
+                <input type="text" class="form-control text-center" placeholder="Nick usuario" ng-model="contData.user.nick">
+              </div>
+              <div class="col-lg-3 col-lg-offset-0 col-md-6 col-md-offset-1 col-sm-11 co-sm-offset-1 col-xs-11 col-xs-offset-1">
+                <input type="text" class="form-control text-center" placeholder="Pass usuario" ng-model="contData.user.pass">
               </div>
             </div>
           </div>

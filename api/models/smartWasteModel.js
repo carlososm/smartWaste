@@ -27,7 +27,7 @@ var ContabilitySchema = new Schema({
     unique : true
   },
   users : [
-    {name : {type : String}, nicks : {type : String}, pass : {type : String}}
+    {name : {type : String}, nick : {type : String}, pass : {type : String}}
   ],
   accounts : [ {
 

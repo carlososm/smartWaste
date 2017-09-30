@@ -7,7 +7,6 @@ function mainController($scope, $rootScope, $http, $routeParams) {
     $rootScope.contId = contId;
     $http.get('/api/contabilities/' + contId)
         .success(function(data, err, status) {
-          $scope.contability = data;
           $("#wrong-signin-cont").addClass("hidden");
           $("#signin-div").removeClass("hidden");
         })
@@ -26,10 +25,10 @@ function mainController($scope, $rootScope, $http, $routeParams) {
     $http.post('/api/contabilities', $scope.contData)
         .success(function(data) {
           $scope.contData = {};
-          $scope.contabilities = data;
-          console.log(data);
+          $scope.contability = data;
+          window.location.replace('/' + $scope.contability._id);
         })
-        .error(function(data) { console.log('Error 2:' + data); });
+        .error(function(data) { console.log('Error:' + data); });
   };
 }
 

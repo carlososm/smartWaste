@@ -15,12 +15,11 @@ exports.create_a_cont = function(req, res) {
 };
 
 exports.search_a_cont = function(req, res) {
-  var ID = req.params.contId;
-  Contability.findOne({_id : ID}, function(err, cont) {
+  Contability.findOne({_id : req.params.contId}, function(err, cont) {
     if (err) {
-      res.senStatus(401);
+      res.senStatus(400);
     } else if (!cont) {
-      res.sendStatus(400);
+      res.sendStatus(404);
     } else {
       res.sendStatus(200);
     }
@@ -28,15 +27,10 @@ exports.search_a_cont = function(req, res) {
 };
 
 exports.read_a_cont = function(req, res) {
-  var ID = req.params.contId;
-  Contability.findOne({_id : ID}, function(err, cont) {
-    if (err) {
-      res.json({status : 401, message : err});
-    } else if (!cont) {
-      res.json({status : 400, msg : "not found"});
-    } else {
-      res.json({status : 200, message : cont});
-    }
+  Contability.findById(req.params.contId, function(err, trade) {
+    if (err)
+      res.send(err);
+    res.send(trade);
   });
 };
 
