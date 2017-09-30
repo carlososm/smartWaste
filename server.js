@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var server = require('http').Server(app);
 var path = require('path');
 
-server.listen(8080, function() {
+server.listen(80, function() {
   console.log('Servidor corriendo en http://localhost:8080');
 });
 
@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public')); // Catch static files
 app.use(function(req, res, next) {
-  if (req.url == '/view') {
+  if (req.url == '/') {
     next();
   } else {
     res.redirect('/index.html');
