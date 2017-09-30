@@ -10,7 +10,7 @@ function mainController($scope, $http, $routeParams) {
 
   // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
   $scope.createCont = function() {
-    alert($scope.contData);
+    console.log($scope.contData);
     $http.post('/contabilities', $scope.contData)
         .success(function(data) {
           $scope.contData = {};
