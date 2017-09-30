@@ -9,7 +9,7 @@ function mainController($scope, $http, $routeParams) {
       .error(function(data) { console.log('Error 3:' + data); });
 
   // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
-  $scope.createTrade = function() {
+  $scope.createCont = function() {
     $http.post('/contabilities', $scope.contData)
         .success(function(data) {
           $scope.contData = {};
