@@ -2,7 +2,7 @@ app.run([
   '$rootScope',
   function($rootScope) {
     $rootScope.contName = "";
-    $rootScope.contId = "59cfa295c5d479690f3b3aca";
+    $rootScope.contId = "";
   }
 ]);
 
