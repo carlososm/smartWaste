@@ -1,5 +1,14 @@
-function mainController($scope, $http, $routeParams) {
+app.run([
+  '$rootScope',
+  function($rootScope) {
+    $rootScope.contName = "";
+    $rootScope.contId = "";
+  }
+]);
+
+function mainController($scope, $routeScope, $http, $routeParams) {
   var contId = $routeParams.contId;
+  $routeScope.contId = contId;
   // // Muestra un CONTABILITY despues de checkearlo como acabado
   $http.get('/' + contId)
       .success(function(data) {
