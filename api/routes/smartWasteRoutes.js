@@ -11,21 +11,21 @@ module.exports = function(app) {
       .delete(smartWaste.delete_a_cont);
 
   // smartWaste trade Routes
-  app.route('/trades')
+  app.route('/:contId/trades')
       .get(smartWaste.list_all_trades)
       .post(smartWaste.create_a_trade);
 
-  app.route('/trades/:tradeId')
+  app.route('/:contId/trades/:tradeId')
       .get(smartWaste.read_a_trade)
       .put(smartWaste.update_a_trade)
       .delete(smartWaste.delete_a_trade);
 
   // smartWaste account Routes
-  app.route('/accounts')
+  app.route('/:contId/accounts')
       .get(smartWaste.list_all_accounts)
       .post(smartWaste.create_an_account);
 
-  app.route('/account/:accountId')
+  app.route('/:contId/account/:accountId')
       .get(smartWaste.read_an_account)
       .put(smartWaste.update_an_account)
       .delete(smartWaste.delete_an_account);

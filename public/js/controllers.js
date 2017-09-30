@@ -98,7 +98,7 @@ function mTradesController($scope, $rootScope, $http) {
 
   // Cuando se añade un nuevo TRADE, manda el texto a la API
   $scope.createTrade = function() {
-    $http.post('/trades', $scope.formData)
+    $http.post('/' + $rootScope + '/trades', $scope.formData)
         .success(function(data) {
           $scope.formData = {};
           $scope.trades = data;
@@ -111,7 +111,7 @@ function mTradesController($scope, $rootScope, $http) {
 function tradeController($scope, $rootScope, $http, $routeParams) {
   var tradeId = $routeParams.tradeId;
   // // Muestra un TRADE despues de checkearlo como acabado
-  $http.get('/trades/' + tradeId)
+  $http.get('/' + $rootScope + '/trades/' + tradeId)
       .success(function(data) {
         $scope.trades = data;
         console.log(data);
@@ -120,7 +120,7 @@ function tradeController($scope, $rootScope, $http, $routeParams) {
 
   // Borra un TRADE despues de checkearlo como acabado
   $scope.deleteTrade = function(id) {
-    $http.delete('/trades/' + id)
+    $http.delete('/' + $rootScope + '/trades/' + id)
         .success(function(data) {
           $scope.trades = data;
           console.log(data);
@@ -130,7 +130,7 @@ function tradeController($scope, $rootScope, $http, $routeParams) {
 
   // Edita un TRADE despues de checkearlo como acabado
   $scope.updateTrade = function(id) {
-    $http.update('/trades/' + id, $scope.trades)
+    $http.update('/' + $rootScope + '/trades/' + id, $scope.trades)
         .success(function(data) {
           $scope.trades = data;
           console.log(data);
