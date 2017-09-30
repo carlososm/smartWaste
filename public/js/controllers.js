@@ -9,6 +9,7 @@ app.run([
 function mainController($scope, $rootScope, $http, $routeParams) {
   var contId = $scope.contId;
   $rootScope.contId = contId;
+  console.log(conId);
   // // Muestra un CONTABILITY despues de checkearlo como acabado
   $http.get('/api/' + contId)
       .success(function(data) {
@@ -19,7 +20,6 @@ function mainController($scope, $rootScope, $http, $routeParams) {
 
   // Cuando se añade un nuevo CONTABILITY, manda el texto a la API
   $scope.createCont = function() {
-    console.log($scope.contData);
     $http.post('/api/contabilities', $scope.contData)
         .success(function(data) {
           $scope.contData = {};
