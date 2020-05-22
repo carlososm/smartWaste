@@ -1,2 +1,2 @@
 # smartWaste
-smartWaste API RESTfull (deprecated)
+smartWaste API RESTfull
